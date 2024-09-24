@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xx-xx-xx
+  labels:
+    app: xx-xx-xx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: xx-xx-xx
+  template:
+    metadata:
+      labels:
+        app: xx-xx-xx
+    spec:
+      containers:
+      - name: xx-xx-xx
+        image: chiniun/xx-xx-xx:v1  # 使用本地镜像
+        ports:
+        - containerPort: 9999      # 应用监听的端口
+        env:
+        - name: ENV_VAR            # 示例环境变量
+          value: "value"
