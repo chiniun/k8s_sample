@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 第一步是安装minikube
-brew install minikube
+brew install minikube && minikube start
 # 第二步是编译golang镜像(酌情考虑是否需要上传到hub,镜像以及标签名自定义)
 docker build . -t chiniun/xx-xx-xx:v1 
 # 第三步是功能实例部署,此时已经能通过endpointsIp + 端口访问了
